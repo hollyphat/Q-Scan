@@ -57,7 +57,7 @@
 
 
     <!-- Define app icon and splashscreen for each platform. -->
-    <icon src="icon.png" />
+    <icon src="img/icon.png" />
     
     
     
