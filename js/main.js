@@ -164,7 +164,7 @@ $$(document).on('page:init', '.page[data-name="dashboard"]', function(e){
 		//scans(sessionStorage.getItem('id'));
 		
 		
-		alert("We are live!");
+		//alert("We are live!");
 		
 		scanApp.scan();
 		

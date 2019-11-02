@@ -28,6 +28,7 @@ var scanApp = {
         Log.initialize(app.displayLogLine);
     },
     scan: function () {
+    	alert("Another one");
         cordova.plugins.barcodeScanner.scan(
                 function (result) {
                     alert("Barcode/QR code data\n" + "Result: " + result.text + "\n" + "Format: " + result.format + "\n" + "Cancelled: " + result.cancelled);
