@@ -166,7 +166,7 @@ $$(document).on('page:init', '.page[data-name="dashboard"]', function(e){
 		
 		//alert("We are live!");
 		
-		scanApp.scan();
+		scanning("CS2014054457PT");
 		
 	});
 
@@ -428,4 +428,50 @@ var post = JSON.parse(sessionStorage.getItem('post'));
 
 	});
 
-})
+});
+
+
+
+
+
+function scanning(matric)
+{
+    cordova.plugins.barcodeScanner.scan(
+        function (result) {
+            if(!result.cancelled)
+            {
+                if(result.format == "QR_CODE")
+                {
+                        
+                        var value = result.text;
+                        var entered_matric = matric; //sessionStorage.getItem("local_matric");
+
+                        app.dialog.alert(value);
+
+                        /*var decoded_matric = decode_qr(value);
+                            // app.alert("Entered matric = "+entered_matric);
+                            // app.alert("Scanned matric = "+value);
+                            // app.alert("Decode matric = "+ decoded_matric);
+                        if(entered_matric == decoded_matric){
+                            app.alert("<span style='font-weight:bolder'>Scanning completed,<br> QR CODE matched with Entered MATRIC NUMBER</span>","Success");
+                        }else{
+                            app.alert("<span style='font-weight:bolder'>QR CODE and MATRIC NUMBER does not match!</span>","Error");
+
+                        }*/
+
+
+
+                        //alert("Done");
+                    
+                }else{
+                    app.dialog.alert("<span style='font-weight:bolder'>QR CODE Only!</span>");
+                }
+            }else{
+                app.dialog.alert("<span style='font-weight:bolder'>You cancelled the scan!</span>");
+            }
+        },
+        function (error) {
+            app.dialog.alert("Scanning failed: " + error);
+        }
+   );
+}
