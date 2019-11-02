@@ -26,6 +26,7 @@
         
     
     
+    <plugin name="cordova-plugin-whitelist" spec="1" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -40,13 +41,7 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <!-- <engine name="android" spec="^6.2.3" /> -->
-
-    <plugin name="cordova-plugin-whitelist"  />
-
-    <plugin name="phonegap-plugin-barcodescanner" spec="7.1.2" />
+    <plugin name="phonegap-plugin-barcodescanner" />
 
 
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
 </widget>
