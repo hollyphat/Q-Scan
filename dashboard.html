@@ -1,0 +1,166 @@
+<div class="page" data-name="dashboard">
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="title">Dashboard</div>
+		</div>
+	</div>
+<!-- 
+  <div class="app-bg-ovarlay"><img src="img/logo2fade.png"></div> -->
+
+	<div class="toolbar tabbar tabbar-labels toolbar-bottom">
+	    <div class="toolbar-inner">
+	      <a href="/dashboard/" class="tab-link">
+	        <i class="icon material-icons md-only">home</i>
+	        <!-- Label text -->
+	        <span class="tabbar-label">Dashboard</span>
+	      </a>
+	      <a href="#tab-2" class="tab-link sheet-open" data-sheet=".demo-sheet">
+	        <i class="icon material-icons md-only">person</i>
+	        <span class="tabbar-label">Update</span>
+	      </a>
+	      <a href="#tab-3" class="tab-link sheet-open" data-sheet=".demo-sheet-2">
+	        <i class="icon material-icons md-only">lock</i>
+	        <span class="tabbar-label">Password</span>
+	      </a>
+
+
+         <a href="#tab-2" class="tab-link " id="qr-code">
+          <i class="icon material-icons md-only">thumb_up</i>
+          <span class="tabbar-label">Scan-Qr Code</span>
+        </a>
+	    </div>
+	  </div>
+
+    <div class="fab fab-right-bottom">
+      <a href="#" id="result" style="display: none;">
+        <i class="icon material-icons md-only">thumb_up</i>
+      </a>
+    </div>
+
+
+	   <div class="sheet-modal demo-sheet">
+        <div class="toolbar">
+            <div class="toolbar-inner">
+                <div class="left"></div>
+                <div class="right">
+                    <a class="link sheet-close"><i class="material-icons">clear</i></a>
+                </div>
+            </div>
+        </div>
+        <div class="sheet-modal-inner">
+            <div class="page-content">
+                <div class="block">
+
+                    <form action="" class="list" id="update-student-profile-form">
+                      <div class="item-content item-input item-input-outline">
+                          <div class="item-inner">
+                              <div class="item-title item-floating-label">Email address</div>
+                              <div class="item-input-wrap">
+                                  <input type="text" placeholder="Enter your email " name="email" id="email" required validate>
+                                  <span class="input-clear-button"></span>
+                                  <div class="item-input-info"></div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="item-content item-input item-input-outline">
+                          <div class="item-inner">
+                              <div class="item-title item-floating-label">Phone Number</div>
+                              <div class="item-input-wrap">
+                                  <input type="tel" placeholder="Enter your phone number " name="phone" id="phone" required validate>
+                                  <span class="input-clear-button"></span>
+                                  <div class="item-input-info"></div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <input type="hidden" name="student-id" id="student-id">
+
+                      <div class="item-content" style="margin-top: 15px;">
+                          <input type="hidden" name="update-student-profile" id="">
+                          <input type="submit" style="margin-right: 12px;" id="update-student-profile" class="button button-large button-raised" value="Submit">
+                      </div>
+                  </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <div class="sheet-modal demo-sheet-2">
+        <div class="toolbar">
+            <div class="toolbar-inner">
+                <div class="left"></div>
+                <div class="right">
+                    <a class="link sheet-close"><i class="material-icons">clear</i></a>
+                </div>
+            </div>
+        </div>
+        <div class="sheet-modal-inner">
+            <div class="page-content">
+                <div class="block">
+
+                    <form action="" class="list" id="update-password-form">
+                      <div class="item-content item-input item-input-outline">
+                          <div class="item-inner">
+                              <div class="item-title item-floating-label">New Password</div>
+                              <div class="item-input-wrap">
+                                  <input type="password" placeholder="New Password " name="password" id="password" required validate>
+                                  <span class="input-clear-button"></span>
+                                  <div class="item-input-info"></div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="item-content item-input item-input-outline">
+                          <div class="item-inner">
+                              <div class="item-title item-floating-label">Confirm Password</div>
+                              <div class="item-input-wrap">
+                                  <input type="password" placeholder="Password " name="cpassword" required validate>
+                                  <span class="input-clear-button"></span>
+                                  <div class="item-input-info"></div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <input type="hidden" name="student-id" id="student-id2">
+
+                      <div class="item-content" style="margin-top: 15px;">
+                          <input type="hidden" name="update-password" id="">
+                          <input type="submit" style="margin-right: 12px;" id="update-password" class="button button-large button-raised" value="Submit">
+                      </div>
+                  </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+	<div class="page-content">
+		<div class="block">
+
+
+			<div class="profile-image"></div>
+
+       <h3 class="text-align-center matric-no"></h3>
+
+			<div class="card data-table">
+				<div class="card-header">
+					Student Information
+				</div>
+				<div class="card-content">
+					
+					<div class="student-info"></div>
+
+				</div>
+			</div>
+
+        <a href="/vote/" class="vote"></a>
+      <a href="/result/" class="result"></a>
+			
+		</div>
+	</div>
+</div>
